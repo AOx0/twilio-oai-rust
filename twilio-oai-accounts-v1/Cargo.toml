@@ -1,17 +1,15 @@
 [package]
 name = "twilio-oai-accounts-v1"
-version = "0.20.3"
-authors = ["OpenAPI Generator team and contributors"]
-edition = "2018"
+version = "0.0.0"
+authors = ["support@twilio.com"]
+description = "This is the public Twilio REST API."
+license = "Apache 2.0"
+edition = "2021"
 
 [dependencies]
-serde = "^1.0"
-serde_derive = "^1.0"
+serde = { version = "^1.0", features = ["derive"] }
+serde_with = { version = "^3.8", default-features = false, features = ["base64", "std", "macros"] }
 serde_json = "^1.0"
-url = "^2.2"
-[dependencies.reqwest]
-version = "0.12.19"
-default-features = false
-features = ["json", "multipart"]
-
-[dev-dependencies]
+serde_repr = "^0.1"
+url = "^2.5"
+reqwest = { version = "^0.12", default-features = false, features = ["json", "multipart"] }
